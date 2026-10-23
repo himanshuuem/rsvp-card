@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stargazer Night — You're Invited</title>
+  <meta name="description" content="Invitation and RSVP for a rooftop stargazing birthday night.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+
+  <main class="card">
+    <header class="invite-header">
+      <p class="eyebrow">You're invited</p>
+      <h1>Stargazer <em>Night</em></h1>
+      <p class="subtitle">Celebrating Himanshu's birthday under the November sky</p>
+    </header>
+
+    <section class="countdown" aria-label="Time until the party">
+      <div><span data-unit="days">--</span><small>days</small></div>
+      <div><span data-unit="hours">--</span><small>hours</small></div>
+      <div><span data-unit="minutes">--</span><small>min</small></div>
+      <div><span data-unit="seconds">--</span><small>sec</small></div>
+    </section>
+
+    <dl class="details">
+      <div>
+        <dt>When</dt>
+        <dd><time datetime="2026-11-21T19:30">Sat, 21 Nov 2026 · 7:30 PM</time></dd>
+      </div>
+      <div>
+        <dt>Where</dt>
+        <dd>Skyline Rooftop, Connaught Place, New Delhi</dd>
+      </div>
+      <div>
+        <dt>Dress code</dt>
+        <dd>Cozy layers — it gets chilly after 10</dd>
+      </div>
+    </dl>
+
+    <section>
+      <h2>The plan</h2>
+      <ol class="timeline">
+        <li><time>7:30</time><span>Arrivals, chai &amp; mocktails</span></li>
+        <li><time>8:15</time><span>Telescope session — Saturn's rings if the sky is clear</span></li>
+        <li><time>9:00</time><span>Dinner &amp; cake</span></li>
+        <li><time>10:00</time><span>Acoustic set + star-spotting quiz (prizes!)</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Bring along</h2>
+      <ul class="checklist">
+        <li>A blanket or shawl</li>
+        <li>Your favourite space fact</li>
+        <li>Zero gifts — your company is the gift</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Getting there</h2>
+      <iframe class="map" title="Map to Connaught Place, New Delhi" loading="lazy"
+        src="https://maps.google.com/maps?q=Connaught%20Place%2C%20New%20Delhi&z=15&output=embed"></iframe>
+    </section>
+
+    <section class="rsvp" id="rsvp">
+      <h2>RSVP</h2>
+      <form class="rsvp-form" novalidate>
+        <label>
+          Your name
+          <input name="name" required autocomplete="name" placeholder="e.g. Priya Sharma">
+        </label>
+        <fieldset>
+          <legend>Will you make it?</legend>
+          <label class="pill"><input type="radio" name="attending" value="yes" required> I'll be there</label>
+          <label class="pill"><input type="radio" name="attending" value="no"> Can't make it</label>
+        </fieldset>
+        <label>
+          Guests (including you)
+          <input type="number" name="guests" min="1" max="4" value="1">
+        </label>
+        <label>
+          <span>A note for the host <span class="optional">(optional)</span></span>
+          <textarea name="note" rows="3" maxlength="200"></textarea>
+        </label>
+        <p class="form-error" role="alert"></p>
+        <button type="submit" class="btn-primary">Send RSVP</button>
+      </form>
+      <div class="rsvp-done" hidden>
+        <p class="done-title"></p>
+        <div class="done-actions">
+          <button type="button" class="btn-primary" data-action="calendar">Add to calendar</button>
+          <button type="button" class="btn-ghost" data-action="edit">Change my answer</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="card-footer">
+      <p>Hand-coded by <a href="https://github.com/himanshuuem">Himanshu</a></p>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
